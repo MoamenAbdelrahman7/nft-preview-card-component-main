@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Francois+One&family=Inter:wght@100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Kumbh+Sans:wght@100..900&family=Outfit:wght@100..900&family=Overpass:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "outfit";
+}
+
+body{
+    display: grid;
+    place-items: center;
+    place-content: center;
+    height: 100vh;
+    background-color: hsl(217, 54%, 11%);
+
+}
+
+.container{
+    width: 350px;
+    padding: 20px 20px 24px;
+    border-radius: 12px;
+    margin: 20px;
+
+    background-color: hsl(215, 51%, 70%);
+    background-color: hsl(178, 100%, 50%);
+    background-color: hsl(0, 0%, 100%);
+    background-color: hsl(217, 54%, 11%);
+    background-color: hsl(215, 32%, 27%);
+    background-color: hsl(216, 50%, 16%);
+}
+
+.container .coverImg {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    display: inline-block;
+}
+.container .coverImg img{
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+}
+.container .coverImg button{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 30px;
+    z-index: 1;
+    display: none;
+
+}
+
+.container .coverImg.hovered::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color:  hsl(178, 100%, 50%);
+    opacity: 40%;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: opacity .3s;
+}
+
+.container .info{
+    padding: 16px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+.container .info h1{
+    color: #fff;
+    width: fit-content;
+    transition: color .2s;
+}
+.container .info h1:hover{
+    color: hsl(178, 100%, 50%);
+    cursor: pointer;
+    transition: color .3s;
+}
+.container .info p{
+    color: hsl(215, 51%, 70%);
+}
+.container .info .price span{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.container .info .price{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.container .info .price h2{
+    color: hsl(178, 100%, 50%);
+    font-size: 16px;
+    font-weight: 500;
+}
+.container .info .price .date{
+    display: flex;
+    gap: 6px;
+}
+.container .info .price small{
+    color: hsl(215, 51%, 70%);
+}
+
+.container .info hr{
+    border-bottom: 1px solid hsl(215, 51%, 70%);
+    opacity: 15%;
+}
+
+.container .card-footer{
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+.container .card-footer img{
+    width: 30px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+}
+.container .card-footer p{
+    color: hsl(215, 51%, 70%);
+    font-size: 15px;
+}
+.container .card-footer p a{
+    color: #fff;
+    text-decoration: none;
+    transition: color .3s;
+}
+.container .card-footer p a:hover{
+    color: hsl(178, 100%, 50%);
+    transition: color .3s;
+}
+
+
+/* Responsevness */
+
+@media screen and (max-width: 426px) {
+    .container{
+        width: 90%;
+    }
+    
+    .container > img{
+        width: 100%;
+        margin: auto;
+        border-radius: 12px;
+    }
+    
+    .container .info{
+        padding: 16px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+    }
+    .container .info h1{
+        color: #fff;
+    }
+    .container .info p{
+        color: hsl(215, 51%, 70%);
+    }
+    .container .info .price span{
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+    .container .info .price{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .container .info .price h2{
+        color: hsl(178, 100%, 50%);
+        font-size: 16px;
+        font-weight: 500;
+    }
+    .container .info .price .date{
+        display: flex;
+        gap: 6px;
+    }
+    .container .info .price small{
+        color: hsl(215, 51%, 70%);
+    }
+    
+    .container .info hr{
+        border-bottom: 1px solid hsl(215, 51%, 70%);
+        opacity: 15%;
+    }
+    
+    .container .card-footer{
+        display: flex;
+        gap: 12px;
+        align-items: center;
+    }
+    .container .card-footer img{
+        width: 30px;
+        border: 1px solid #fff;
+        border-radius: 50%;
+    }
+    .container .card-footer p{
+        color: hsl(215, 51%, 70%);
+        font-size: 15px;
+    }
+    .container .card-footer p a{
+        color: #fff;
+        text-decoration: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
